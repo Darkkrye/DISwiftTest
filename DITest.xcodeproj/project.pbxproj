@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		847A29451FB341FE006B4865 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A29441FB341FE006B4865 /* Structs.swift */; };
+		847A29471FB3423D006B4865 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A29461FB3423D006B4865 /* ModelController.swift */; };
+		847A29491FB34911006B4865 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A29481FB34911006B4865 /* EditViewController.swift */; };
 		84832F5E1FB33FEE00DB826D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84832F5D1FB33FEE00DB826D /* AppDelegate.swift */; };
 		84832F601FB33FEE00DB826D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84832F5F1FB33FEE00DB826D /* ViewController.swift */; };
 		84832F631FB33FEE00DB826D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84832F611FB33FEE00DB826D /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		847A29441FB341FE006B4865 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		847A29461FB3423D006B4865 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		847A29481FB34911006B4865 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		84832F5A1FB33FEE00DB826D /* DITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84832F5D1FB33FEE00DB826D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84832F5F1FB33FEE00DB826D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,9 @@
 				84832F641FB33FEE00DB826D /* Assets.xcassets */,
 				84832F661FB33FEF00DB826D /* LaunchScreen.storyboard */,
 				84832F691FB33FEF00DB826D /* Info.plist */,
+				847A29441FB341FE006B4865 /* Structs.swift */,
+				847A29461FB3423D006B4865 /* ModelController.swift */,
+				847A29481FB34911006B4865 /* EditViewController.swift */,
 			);
 			path = DITest;
 			sourceTree = "<group>";
@@ -259,6 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847A29491FB34911006B4865 /* EditViewController.swift in Sources */,
+				847A29451FB341FE006B4865 /* Structs.swift in Sources */,
+				847A29471FB3423D006B4865 /* ModelController.swift in Sources */,
 				84832F601FB33FEE00DB826D /* ViewController.swift in Sources */,
 				84832F5E1FB33FEE00DB826D /* AppDelegate.swift in Sources */,
 			);
