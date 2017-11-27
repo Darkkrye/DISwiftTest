@@ -13,6 +13,8 @@
 @interface MockFrameworkTests : XCTestCase {
     id MyMockedObject;
     NSString* val;
+    
+    id userDefaultsMock;
 }
 
 @end
@@ -26,9 +28,11 @@
     
     // Mock
     MyMockedObject = OCMClassMock([MyClass class]);
+    userDefaultsMock = OCMClassMock([NSUserDefaults class]);
     
     // Stub
     OCMStub([MyMockedObject returnClassName]).andReturn(val);
+    OCMStub([userDefaultsMock stringForKey:@"Test"]).andReturn(@"0");
 }
 
 - (void)tearDown {
@@ -42,6 +46,15 @@
     NSString* endVal = [MyMockedObject returnClassName];
     
     XCTAssertEqual(endVal, val);
+}
+
+- (void) testSecondMock_MockNSUserDefaults {
+    XCTAssertEqual(@"0", [userDefaultsMock stringForKey:@"Test"]);
+    
+    OCMStub([userDefaultsMock stringForKey:[OCMArg any]]).andReturn(@"1");
+    
+    XCTAssertEqual(@"1", [userDefaultsMock stringForKey:@"0"]);
+    XCTAssertEqual(@"1", [userDefaultsMock stringForKey:@"Blabla"]);
 }
 
 - (void)testPerformanceExample {
