@@ -7,8 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "MyClass.h"
+#import <OCMock.h>
 
-@interface MockFrameworkTests : XCTestCase
+@interface MockFrameworkTests : XCTestCase {
+    id MyMockedObject;
+    NSString* val;
+}
 
 @end
 
@@ -17,6 +22,13 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    val = @"MyClassFromMock";
+    
+    // Mock
+    MyMockedObject = OCMClassMock([MyClass class]);
+    
+    // Stub
+    OCMStub([MyMockedObject returnClassName]).andReturn(val);
 }
 
 - (void)tearDown {
@@ -24,9 +36,12 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testFirstMock_ReturnClassNameShouldReturnANewValue {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    NSString* endVal = [MyMockedObject returnClassName];
+    
+    XCTAssertEqual(endVal, val);
 }
 
 - (void)testPerformanceExample {
